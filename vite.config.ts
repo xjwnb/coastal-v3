@@ -8,7 +8,7 @@ import AutoImport from "unplugin-auto-import/vite";
 import Components from "unplugin-vue-components/vite";
 import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
 // icon
-import { svgBuilder } from './src/plugins/svgBuilder';
+import { svgBuilder } from "./src/plugins/svgBuilder";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -21,7 +21,16 @@ export default defineConfig({
     Components({
       resolvers: [ElementPlusResolver()],
     }),
-    svgBuilder('./src/icons/svg/')
+    svgBuilder("./src/icons/svg/"),
+    Components({
+      resolvers: [
+        ElementPlusResolver({
+          importStyle: "sass",
+          // directives: true,
+          // version: "2.1.5",
+        }),
+      ],
+    }),
   ],
   resolve: {
     alias: {
@@ -30,5 +39,13 @@ export default defineConfig({
   },
   define: {
     "process.env": {},
+  },
+
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@use "@/styles/element/index.scss" as *;`,
+      },
+    },
   },
 });

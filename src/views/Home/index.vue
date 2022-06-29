@@ -9,9 +9,7 @@ export default defineComponent({
 
     return () => (
       <div>
-        home
-        <el-button>嘿嘿嘿</el-button>
-        <svg-icon name="logo" color="red"/>
+        index
       </div>
     )
   }

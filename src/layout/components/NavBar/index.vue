@@ -62,6 +62,8 @@ const handleLoginOut = () => {
   position: relative;
   background: #fff;
   box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
+  border-top-left-radius: 30%;
+  margin-left: 20px;
 
   .hamburger-container {
     line-height: 46px;
@@ -83,11 +85,10 @@ const handleLoginOut = () => {
 
 .user-wrapper {
   box-sizing: border-box;
-  width: 50px;
-  height: 50px;
-  border-radius: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
   overflow: hidden;
-  padding: 5px;
   background-color: #fff;
   margin-right: 20px;
 }

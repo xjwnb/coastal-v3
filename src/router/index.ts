@@ -42,7 +42,8 @@ export const constantRoutes: RouteParamConfig[] = [
     name: "system",
     meta: {
       icon: "system",
-      title: "系统管理",
+      // title: "系统管理",
+      title: "页面1",
     },
     children: [
       {
@@ -50,7 +51,8 @@ export const constantRoutes: RouteParamConfig[] = [
         name: "roleAdmin",
         component: () => import("@/views/System/RoleAdmin/index.vue"),
         meta: {
-          title: "角色管理",
+          // title: "角色管理",
+          title: "页面2",
           icon: "role",
         },
       },
@@ -59,7 +61,8 @@ export const constantRoutes: RouteParamConfig[] = [
         name: "menuAdmin",
         component: () => import("@/views/System/MenuAdmin/index.vue"),
         meta: {
-          title: "菜单管理",
+          // title: "菜单管理",
+          title: "页面3",
           icon: "menu",
         },
       },

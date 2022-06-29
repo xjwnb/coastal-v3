@@ -1,5 +1,13 @@
 <script setup lang="ts">
+import { computed } from "vue";
 import { title, logoUrl } from "@/config/settings";
+import { useAppStore } from "@/stores/app";
+
+const appStore = useAppStore();
+
+const isCollapse = computed(() => {
+  return appStore.sidebar.opened;
+});
 </script>
 
 
@@ -8,7 +16,7 @@ import { title, logoUrl } from "@/config/settings";
     <div class="logo-img">
       <el-image :src="logoUrl" :title="title" :alt="title" />
     </div>
-    <div class="logo-name">{{ title }}</div>
+    <div v-if="!isCollapse" class="logo-name">{{ title }}</div>
   </div>
 </template>
 
@@ -19,8 +27,8 @@ import { title, logoUrl } from "@/config/settings";
   align-items: center;
 
   .logo-img {
-    width: 70px;
-    height: 70px;
+    width: 65px;
+    height: 65px;
     margin-top: 8px;
     border-radius: 10%;
     overflow: hidden;

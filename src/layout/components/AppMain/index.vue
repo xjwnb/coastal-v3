@@ -35,7 +35,8 @@ console.log(cachedViews.value);
         </keep-alive>
       </router-view>
     </transition> -->
-    <router-view v-slot="{ Component }">
+    <div class="page-container">
+      <router-view v-slot="{ Component }">
       <Transition name="fade-transform" mode="out-in">
         <!-- <div> -->
         <keep-alive :include="cachedViews">
@@ -44,6 +45,7 @@ console.log(cachedViews.value);
         <!-- </div> -->
       </Transition>
     </router-view>
+    </div>
   </section>
 </template>
 
@@ -80,5 +82,9 @@ console.log(cachedViews.value);
 .slide-fade-leave-to {
   transform: translateX(20px);
   opacity: 0;
+}
+
+.page-container {
+  padding: 15px;
 }
 </style>

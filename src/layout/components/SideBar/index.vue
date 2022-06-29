@@ -80,4 +80,18 @@ const activeMenu = computed(() => useRoute().path);
 .scrollbar-wrapper-collapse {
   width: 64px !important;
 }
+
+.router-link-active {
+  position: relative;
+  &::before {
+    content: "";
+    width: 3px;
+    position: absolute;
+    // height: 50px;
+    height: 50%;
+    background-color: #fff;
+    top: 25%;
+    
+  }
+}
 </style>

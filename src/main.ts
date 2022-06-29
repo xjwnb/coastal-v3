@@ -5,6 +5,9 @@ import App from "./App.vue";
 import router from "./router";
 
 import "@/styles/init.scss";
+import "@/styles/index.scss";
+
+import "element-plus/theme-chalk/src/message.scss"
 
 
 import SvgIcon from './components/SvgIcon/index.vue'

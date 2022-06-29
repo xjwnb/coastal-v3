@@ -2,7 +2,7 @@
 import { RouterView } from "vue-router";
 import { SideBar, TagViews, NavBar, AppMain } from "./components";
 import { useAppStore } from "@/stores/app";
-import { menuBackgroundColor } from "@/config/settings";
+import { menuBackgroundColor, mainBgColor } from "@/config/settings";
 
 const appStore = useAppStore();
 
@@ -22,6 +22,9 @@ console.log(appStore);
       'main-container',
       appStore.sidebar.opened ? 'main-container-collapse' : '',
     ]"
+    :style="{
+      backgroundColor: mainBgColor
+    }"
   >
     <div class="fixed-header">
       <NavBar />
@@ -46,6 +49,7 @@ console.log(appStore);
   left: 0;
   z-index: 1001;
   overflow: hidden;
+  background-color: #f1f3f7;
 }
 
 .main-container {
@@ -53,6 +57,8 @@ console.log(appStore);
   transition: margin-left 0.28s;
   margin-left: $sideBarWidth;
   position: relative;
+  border-bottom-left-radius: 50px;
+  border-top-left-radius: 50px;
 }
 
 .fixed-header {

@@ -161,15 +161,18 @@ watch(
       // background-color: #002FA7;
       color: #fff;
       // border-color: #002FA7;
+      // &::before {
+      //   content: "";
+      //   background: #fff;
+      //   display: inline-block;
+      //   width: 8px;
+      //   height: 8px;
+      //   border-radius: 50%;
+      //   position: relative;
+      //   margin-right: 2px;
+      // }
       &::before {
-        content: "";
-        background: #fff;
-        display: inline-block;
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        position: relative;
-        margin-right: 2px;
+        display: none;
       }
     }
   }
@@ -185,24 +188,24 @@ watch(
   .tags-view-item {
     display: flex;
     align-items: center;
-    .el-icon-close {
-      width: 16px;
-      height: 16px;
-      vertical-align: 2px;
-      border-radius: 50%;
-      text-align: center;
-      transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-      transform-origin: 100% 50%;
-      &:before {
-        transform: scale(0.6);
-        display: inline-block;
-        vertical-align: -3px;
-      }
-      &:hover {
-        background-color: #b4bccc;
-        color: #fff;
-      }
-    }
+    // .el-icon-close {
+    //   width: 16px;
+    //   height: 16px;
+    //   vertical-align: 2px;
+    //   border-radius: 50%;
+    //   text-align: center;
+    //   transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    //   transform-origin: 100% 50%;
+    //   &:before {
+    //     transform: scale(0.6);
+    //     display: inline-block;
+    //     vertical-align: -3px;
+    //   }
+    //   &:hover {
+    //     background-color: #b4bccc;
+    //     color: #fff;
+    //   }
+    // }
   }
 }
 </style>
